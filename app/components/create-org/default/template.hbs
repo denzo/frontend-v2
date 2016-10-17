@@ -1,0 +1,9 @@
+<button {{action "prev"}} local-class="btn" disabled={{if (eq index 0) true}}>Prev</button>
+<hr>
+{{#liquid-bind activeState class="swiper-container" local-class="centered"
+  as |currentActiveState|}}
+  {{component (concat "create-org/default/" currentActiveState.componentName)
+    next=(action "next")
+    prev=(action "prev")
+  }}
+{{/liquid-bind}}

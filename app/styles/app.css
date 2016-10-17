@@ -1,0 +1,8 @@
+@after-module './base/typography';
+
+/* <feature:shiny> */
+:global .grs {
+  background: red;
+  padding: 10px;
+}
+/* </feature:shiny> */
